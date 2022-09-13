@@ -4,13 +4,18 @@ const links = [
       url: "week1/index.html"
     }
   ]
-    function loadindex(){
+
+    function loadIndex() {
       const ol = document.querySelector("#linkslist");
 
-      links.forEach(link=> {
-        const link = document.childElement("li")
+      links.forEach( link => {
+        const li = document.createElement("li");
         const href = document.createElement("a");
         href.setAttribute("href", link.url);
+        href.innerText = link.label;
+
+        li.appendChild(href);
+        ol.appendChild(li);
       })
     }  
  
