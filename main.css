@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    font-size: 16px;
+    background: rgb(190, 192, 192);
+    margin: 0;
+    padding: 0;
+    font-family: 'Pattaya', sans-serif;
+
+}
+
+h1{
+    margin: 20px;
+}
+#linkslist{
+    font-size: 1.5rem;
+    font-family: 'Pattaya', sans-serif;
+    color: #000;
+    list-style-type: none;
+
+}
+
+main{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+}
+
+
+
+
+
+
+footer{
+    display: block;
+    background-color:rgba(63, 86, 97, 0.753);
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    width: auto;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: auto;
+}
