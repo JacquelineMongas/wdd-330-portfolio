@@ -1,11 +1,10 @@
 const links = [
-    {
-      label: "Week1 notes",
-      url: "week1/index.html"
-    }
-    
-  ]
-
+    {label: "Week 1 notes", url: "week1/index.html",},
+    {label: "Week 2 notes", url:"week2/index.html",},
+    {label: "week 2 group work", url:"week2/groupwork.html",},
+   
+  ];
+  
     function loadIndex() {
       const ol = document.querySelector("#linkslist");
 
