@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../small.css">
+</head>
+
+<body>
+    <style>
+        .hidden {
+    display: none;
+}
+    </style>
+    <main>
+        <h1>Week 4 Notes</h1>
+        <h3>Forms</h3>
+        <p>&bull; Forms are used in a lot of inputs from users, such as logins, search
+            engines and more.</p>
+        <p>&bull; You can use event listeners and functions combined to take a value from
+            the [0] (beginning) section of your form to get a value.</p>
+        <p>&bull; Forms can have values that if a string is empty the submit button is
+            disabled via javascript</p>
+        <p>&bull; </p>
+
+        <h3>Object-oriented Programming</h3>
+        <p>&bull;  OOP is a method of separating the code into
+            objects with properties and methods that you call.</p>
+            <p>&bull; There are many different things you can do in OOP(object-oriented
+                programming), such as encapsulation, polymorphism, and more.
+                <br>
+            &bull; Encapsulation is just exposing only important parts of programming like
+            an on button.
+        <br>
+    &bull;Polymorphism is like taking a class and morphing it for example to do
+    something else or add to it. for example, you could have the animal
+    class which extends to the dog class</p>
+
+    <h3>Modern JavaScipt</h3>
+    <p>&bull; Use of frameworks to accomodate for various different aspects of programming</p>
+    <p>&bull; Minify code to allow for faster load times and for less data usage</p>
+
+  <h3>Code Example</h3>
+
+    <p>This is a form that changes depending on what you enter. A dynamic form.</p>
+    
+
+    <form id="dynamic">
+        <div id="nameInput">
+            <label for="name">Enter your name</label><input id="name" type="text" onchange="watchName()">
+        </div>
+        <p class="hidden" id="userName"></p>
+        <div id="radioGroupBtns" class="hidden">
+            <input type="radio" name="rad" value="1" onchange="watchRadio()">Ask Another Question</input>
+            <input type="radio" name="rad" value="0" onchange="watchRadio()">Nothing</input>
+        </div>
+        <div id="finalQ" class="hidden">
+            <label for="status">How are you today?</label><input type="text" name="status" id="status" onchange="statusUpdate()">
+        </div>
+        <div id="userStatus" class="hidden">
+
+        </div>
+        <div id='goodBye' class="hidden">
+            <p id="goodbyeName"></p>
+        </div>
+
+    </form>
+
+    <li>
+        Questions:
+    </li>
+
+<script>
+    var name;
+var radioVal;
+var userStatus;
+
+function watchName() {
+    var input = document.getElementById('name');
+    var display = document.getElementById('userName');
+    name = input.value;
+    document.getElementById('nameInput').classList.add('hidden');
+    display.classList.remove('hidden');
+    display.innerText = `Hello ${name}! What Can I do for you today?`;
+    document.getElementById('radioGroupBtns').classList.remove('hidden');
+}
+
+function watchRadio() {
+    var radios = document.getElementsByName('rad');
+
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            radioVal = radios[i].value
+            break;
+        }
+    }
+
+    if (radioVal === "0") {
+        showGoodbye();
+    } else {
+        nextQ();
+    }
+}
+
+function showGoodbye() {
+    document.getElementById('radioGroupBtns').classList.add('hidden');
+    document.getElementById('goodBye').classList.remove('hidden');
+    document.getElementById('goodbyeName').innerText = `Goodbye ${name}. Till next time.`;
+}
+
+function nextQ() {
+    document.getElementById('radioGroupBtns').classList.add('hidden');
+    document.getElementById('finalQ').classList.remove('hidden');
+}
+
+function statusUpdate() {
+    userStatus = document.getElementById('status').value;
+    var userStatusDiv = document.getElementById('userStatus');
+    userStatusDiv.classList.remove('hidden')
+    userStatusDiv.innerText = `You are: ${userStatus}`
+}
+
+document.getElementById('dynamic').addEventListener('submit', function (e) {
+    watchName();
+    e.preventDefault();
+}, false);
+</script>
+
+    </main>
+
+</body>
+
+</html>
