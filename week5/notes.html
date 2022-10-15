@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEK 5</title>
+    <link rel="stylesheet" href="../week3/small.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Week 5 Notes</h1>
+        <section>
+            <h3>Testing and Debugging:</h3>
+            <h3>Errors, Exceptions, and Warnings</h3>
+            <p>
+                <b>System error</b> -There's a problem with the system or external devices with which the program is
+                interacting.
+                <br>
+                <b>Programmer error </b> -There the program contains incorrect syntax or faulty logic; it could even be
+                as simple as
+                a typo.
+                <br>
+                <b>User error</b> ― The user has entered data incorrectly, which the program is unable to handle.
+                <br>
+                <b>Exception</b>
+                <br> exception is an error that produces a return value that can then be used by the
+                program to deal with the error <br>
+                Stack Trace can be very helpful - you can follow the listing to trace where the problem lies <br>
+                Warnings - warning can occur if there's an error in the code that isn't enough to cause the program
+                to crash <br>
+                &bull; this can be a problem if the program runs incorrectly but still runs <br>
+                Because it is loosely typed some errors can slip through the code, you can enforce a strict mode ->
+                'use strict'; <br>
+                &bull; this will make it throw an exception instead of a warning (if the engine will accept the mode)
+                <br>
+                In can be used in a function or a strict function that will run the whole program code.
+            </p>
+
+            <h3>Linting</h3>
+            <p>
+                Linting Tools</b> <br>
+                options to use linting tools help when enforcing a style guide, it will help catch errors live but won't
+                necessarily guarantee anything. <br>
+                ESLint inthis article on SitePoint -
+                https://www.sitepoint.com/up-and-running-with-eslint-the-pluggable-javascript-linter/. <br>
+                Feature detectors are best implemented in an if statement - therefore only running if it is capable.
+                <br>
+                if (window.holoDeck) { <br>
+                virtualReality.activate(); <br>
+                } <br>
+            </p>
+
+            <h3>Debugging</h3>
+            <p>
+                <b> Debugging in the browser</b> is my favorite way of checking how things work, and when they are
+                implemented, even why they don't. <br>
+                The book says the 'trusty alert is the basic form of debugging' however, I like console.log(); and
+                debugger; <br>
+                <br>
+            </p>
+
+            <h3>Error Objects</h3>
+            <p>
+                <b>EvalError:</b> is not used in the current ECMAScript specification and only retained for backwards
+                compatibility. It was used to identify errors when using the global eval() function.<br>
+                RangeError is thrown when a number is outside an allowable range of values.<br>
+                ReferenceError is thrown when a reference is made to an item that doesn't exist. For example, calling a
+                function that hasn't been defined.<br>
+                SyntaxError is thrown when there's an error in the code's syntax.<br>
+                TypeError is thrown when there's an error in the type of value used; for example, a string is used when
+                a number is expected.<br>
+                URIError is thrown when there's a problem encoding or decoding the URI.<br>
+                InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine. A
+                common cause of this too much recursion.<br>
+                const error = new Error(); Constructor function to create and the parameter is the error message ->
+                const error = new Error("oops, something isn't right"); <br>
+                <br> there are errors that are thrown automatically by the JavaScript engine when an error occurs. It's
+                also possible to throw your own exceptions using the throw statement <br>
+                throw new Error('Something has gone badly wrong!'); <br>
+                This example shows the error to be efficient in explaining the problem - not just NaN <br><br>
+                function squareRoot(number) <br>
+            </p>
+
+            <li>Questions</li>
+            <p>
+
+            </p>
+            <h2>Team Work</h2>
+            <li><a href="./groupwk5/index.html">Team Activity</a></li>
+            <li><a href="./todo-list/todo.html">To Do List</a></li>
+        </section>
+    </main>
+    <footer>
+        ©<span id="Year"></span> 2022 | Jacqueline Mongas | WDD 330 | France |
+        <a href="https://www.byui.edu/online" class="byui">BYUI Online Learning</a>
+        <p>Last Update : <span id="lastUpdate"></span></p>
+    </footer>
+
+</body>
+
+</html>
