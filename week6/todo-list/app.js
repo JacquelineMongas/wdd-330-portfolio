@@ -12,8 +12,6 @@ inputBox.onkeyup = ()=>{
   }
 }
 
-
-
 showTasks(); 
 
 addBtn.onclick = ()=>{ 

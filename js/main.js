@@ -9,6 +9,7 @@ const links = [
     {label: "Week 4 Group Work", url:"week4/teamwork/tictactoe.html",},
     {label: "Week 5 notes", url: "week5/notes.html",},
     {label: "Week 5 Group Work", url:"week5/groupwk5/index.html",},
+    {label: "Week 6 To Do List", url:"week6/todo-list/todo.html",},
    
   ];
   
