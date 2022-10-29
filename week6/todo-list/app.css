@@ -127,3 +127,20 @@ body{
   opacity: 1;
   pointer-events: auto;
 }
+
+span button {
+  height: 30px;
+  margin-top: 15px;
+  border: none;
+  height: 40px;
+  width: 90px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+span button:hover {
+  border: 3px solid #ff7f50;
+  padding: 3px;
+}
