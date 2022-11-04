@@ -12,6 +12,7 @@ const links = [
     {label: "Week 6 To Do List", url:"week6/todo-list/todo.html",},
     {label: "Week 7 Notes", url:"week7/notes7.html",},
     {label: "Week 7 Group Work", url:"week7/groupActivity/hiking-complete.html",},
+    {label: "Week 8 Group Work", url:"week8/groupActivity8/index.html",},
    
   ];
   

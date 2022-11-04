@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching API</title>
+    <link rel="stylesheet" href="swapi.css">
+</head>
+
+<body>
+
+    <body>
+        <h1>Star Wars: People</h1>
+        <div id="output">
+        </div>
+        <li></li>
+
+        <p id='pagecount'><strong>0</strong> Pages Available</p>
+        <div class="flexContainer">
+            <button class="button1" id='prev'>Prev</button>
+            <button id='next'>Next</button>
+            <button>
+                <div id='jump' class='flexContainer button1'>
+                    <input type='number' id='page'>
+                    <button id='go'>Go</button>
+                </div>
+            </button>
+
+        </div>
+
+
+        <script src="./api.js"></script>
+        <footer></footer>
+    </body>
+
+</html>

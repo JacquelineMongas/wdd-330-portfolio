@@ -1,0 +1,90 @@
+html {
+    text-align:center; 
+    display:grid;
+    place-items:center;
+    min-height:100vh;
+  }
+  body {
+    background:#111;
+    color:white;
+    background:linear-gradient(to bottom right, #111 48%, #222 49%, #333 51%, #111 52%);
+    background-size:1em 1em;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    width:100%;
+    max-width:1000px;
+    margin:0 auto;
+    padding:3em;
+    justify-content: space-around;
+  }
+
+  h1 {
+    font-family:monospace;
+    padding: 10px;
+    margin:0;
+    text-align:left;
+    font-weight:100;
+    font-size:2rem;
+    margin-bottom:30px;
+    color: yellow;
+  }
+ 
+  #text{
+    font-size:12px;
+    padding-bottom:50px;
+
+  }
+
+  #output {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px gray;
+    height: 100%;
+    margin: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  button  {
+    border-radius: 5px;
+    min-width: 75px;
+    height: 2rem;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+  .button1{
+    border-radius: 5px;
+    min-width: 75px;
+    height: 2rem;
+    justify-content: space-between;
+
+  }
+
+  .hidden {
+    display: none;
+  }
+  li {
+    margin: 5px;   
+    list-style: none;  
+    border-bottom: 1px dotted rgb(177, 177, 93);   
+  }
+
+  input {
+    max-width: 40px;
+  }
+
+  input[type='number']+button {
+    max-width: 10px;
+  }
+
+  #pagecount {
+    text-align: center;
+  }
+  .flexContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+  
