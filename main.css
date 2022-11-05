@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
 
 body {
     font-size: 16px;
@@ -9,6 +9,9 @@ body {
 
 }
 h1{
+    font-family: 'Lora';
+    font-weight: lighter;
+    font-style: italic;
     margin: 20px;
 }
 #linkslist{
