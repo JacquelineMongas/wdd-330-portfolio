@@ -27,6 +27,7 @@ const links = [
     url: "week10/groupActivity/quakes.html",
   },
   { label: "Week 10 Notes", url: "week10/notes10.html" },
+  {label: "Week 11", url: "week11/client/week11.html"},
 ];
 
 function loadIndex() {
