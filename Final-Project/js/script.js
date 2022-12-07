@@ -1,11 +1,12 @@
-//set the json source URL
+const charactersList = document.getElementById('charactersList');
+let hpCharacters = [];
 
-  const requestURL = "https://hp-api.herokuapp.com/api/characters";
-  fetch(requestURL)
-    .then((res) => res.json())
-    .then((jsonData) => console.log(jsonData));
-      // It brings all data at the API and it shows it at the console
-
-      
-    
-
+const loadCharacters = async () => {
+    try {
+        const res = await fetch('https://hp-api.onrender.com/api/characters');
+        hpCharacters = await res.json();
+        displayCharacters(hpCharacters);
+    } catch (err) {
+        console.error(err);
+    }
+};

@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Project</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header>
-        <h1>&#x2728;Harry Potter Characters &#x2728;</h1>
-      </header>
-      <main>
-        <div class="searchField">
-          <input type="text" id="searchInputName" onkeyup="searchCharaterName()" placeholder="Search Character Name..">
-          <input type="text" id="searchInputHouse" onkeyup="searchHouse()" placeholder="Search For House:..">
-          <input type="text" id="searchInputPatronus" onkeyup="searchPatronus()" placeholder="Search Patronus.."> 
-          </select>
-        </div>
-        <div class="allCharacters"></div>
-      </main>
-    
 
-    <script src="./js/script.js"></script>
-    <footer>
-        <p><a href="/index.html">Portfolio</a></p>
-    </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Project</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Metal+Mania&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <header>
+    <h1>
+      &#129668;
+      Harry Potter Characters
+      &#129668;
+    </h1>
+  </header>
+  <main>
+    <div id="searchWrapper">
+      <input type="text" name="searchBar" id="searchBar" placeholder="search for a character" />
+    </div>
+    <ul id="charactersList"></ul>
+    </div>
+  </main>
+  <footer>
+    <p><a href="/index.html">Portfolio</a></p>
+  </footer>
+  <script src="./js/script.js"></script>
 </body>
+
 </html>
