@@ -8,9 +8,7 @@
   <title>App Project</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Metal+Mania&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 
 </head>
 
@@ -22,10 +20,13 @@
       &#129668;
     </h1>
   </header>
-  <main>
-    <div id="searchWrapper">
-      <input type="text" name="searchBar" id="searchBar" placeholder="search for a character" />
-    </div>
+  <main> 
+    <div class="searchCharacters">
+      <input type="text" id="searchInputName" onkeyup="searchCharactersName()" placeholder="Enter Name..">
+      <input type="text" id="searchInputHouse" onkeyup="searchCharactersHouse()" placeholder="Search House..">
+      <input type="text" id="searchInputPatronus" onkeyup="searchCharactersPatronus()" placeholder="Search Patronus..">
+      </select>
+   
     <ul id="charactersList"></ul>
     </div>
   </main>
@@ -34,5 +35,4 @@
   </footer>
   <script src="./js/script.js"></script>
 </body>
-
 </html>
