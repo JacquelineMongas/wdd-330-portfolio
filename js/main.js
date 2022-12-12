@@ -28,6 +28,7 @@ const links = [
   },
   { label: "Week 10 Notes", url: "week10/notes10.html" },
   {label: "Week 11", url: "week11/client/week11.html"},
+  {label:"Challenge Two", url: "Final-Project/index.html"},
 ];
 
 function loadIndex() {

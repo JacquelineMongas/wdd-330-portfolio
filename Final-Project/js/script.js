@@ -1,70 +1,71 @@
-
- //const requestURL = 'https://hp-api.onrender.com/api/characters'
-
-const charactersList = document.getElementById('charactersList');
+const hpcharacters = document.getElementById(".charactersList");
 let hpCharacters = [];
+const requestURL = "https://hp-api.onrender.com/api/characters"
 
 const loadCharacters = async () => {
-    try {
-        const res = await fetch('https://hp-api.onrender.com/api/characters');
-        hpCharacters = await res.json();
-        console.log (hpCharacters);
-    } catch (err) {
-        console.error(err);
-}
+  try {
+    const res = await fetch(requestURL);
+    hpCharacters = await res.json();
+    console.log(hpCharacters);
+  } catch (err) {
+    console.error(err);
+  }
 };
 loadCharacters().then();
 
- //select output location
- 
- hpCharacters.forEach((hpCharacters) => {
+//select output location
+
+hpCharacters.forEach((hpCharacters) => {
   let hpCharactersUl = document.createElement("ul");
   let p = document.createElement("p");
-  
+
   //use templet Literals
-  p.innerHTML = `<a href=${hpCharacters.name}><img src="${hpCharacters.image}" alt ="${hpCharacters.patronus } "></a>`;
+  p.innerHTML = `<a href=${hpCharacters.name}><img src="${hpCharacters.image}" alt ="${hpCharacters.patronus} "></a>`;
   hpCharactersUl.append(p);
-  charactersList.append(hpCharactersUl);
+  hpCharacters.append(hpCharactersUl);
 });
-
-
 
 //filter based on characters name
 function searchCharactersName() {
   let emptydiv = document.querySelector(".charactersList");
-  emptydiv.innerHTML = "";
-  filterCharactersName();
+  emptydiv.innerHTML = ("searchInputName");
+  searchCharactersName();
 }
-function filterCharactersName() {
+function searchCharactersName() {
   const searchterm = document.querySelector("#searchInputName").value;
   fetch(requestURL)
     .then(function (response) {
       return response.json();
     })
     .then(function (jsonObject) {
-      const characters= jsonObject["characters"];
+      const characters = jsonObject["characters"];
 
       //select output location
-      let searchCharacters= document.querySelector(".charactersList");
+      let searchCharacters = document.querySelector(".charactersList");
       //filter the characters - if they match the search term
-      const searchcharactersfilter = characters.filter((x) =>
-        x.actorfirstname.toUpperCase().includes(searchterm.toUpperCase()) || x.actorlastname.toUpperCase().includes(searchterm.toUpperCase())
-      );
-      searchcharactersfilter.forEach((characters) => {
+      const filteredCharacters = hpCharacters.filter((character) => {
+        return (
+            character.name.toLowerCase().includes(searchString) ||
+            character.house.toLowerCase().includes(searchString)
+        );
+    });
+    displayCharacters(filteredCharacters);
+});
+      searchCharacters.forEach((characters) => {
         let charactersdiv = document.createElement("div");
         let p = document.createElement("p");
         //use templet Literals
-        p.innerHTML = `<a href=${characters.sitelink}><img src="${characters.image}" alt ="${characters.patronus}"></a>`;
+        p.innerHTML = `<a href=${hpCharacters.name}><img src="${characters.image}" alt ="${hpCharacters.patronus}"></a>`;
         charactersdiv.prepend(p);
-        searchedcharacters.prepend(charactersdiv);
+        searchCharacters.prepend(charactersdiv);
       });
-    });
-}
+    }
+
 
 //filter based on house
 function searchCharactersHouse() {
   let emptydiv = document.querySelector(".charactersList");
-  emptydiv.innerHTML = "";
+  emptydiv.innerHTML = ("searchCharactersHouse");
   filterCharactersHouse();
 }
 function filterCharactersHouse() {
@@ -74,19 +75,19 @@ function filterCharactersHouse() {
       return response.json();
     })
     .then(function (jsonObject) {
-      const characters= jsonObject["hpCharacters"];
+      const characters = jsonObject["hpCharacters"];
 
       //select output location
       let searchedcharacters = document.querySelector(".charactersList");
       //filter the charactersList - if they match the search term
-      const searchcharactersListfilter = charactersList.filter((x) =>
+      const searchcharactersListfilter = characters.filter((x) =>
         x.genre.toUpperCase().includes(searchterm.toUpperCase())
       );
-      searchcharactersfilter.forEach((characters) => {
+      searchcharactersListfilter.forEach((characters) => {
         let charactersdiv = document.createElement("div");
         let p = document.createElement("p");
         //use templet Literals
-        p.innerHTML = `<a href=${characters.sitelink}><img src="${characters.image}" alt ="${characters.patronus}"></a>`;
+        p.innerHTML = `<a href=${hpCharacters.name}><img src="${hpCharacters.image}" alt ="${hpCharacters.patronus}"></a>`;
         charactersdiv.prepend(p);
         searchedcharacters.prepend(charactersdiv);
       });
@@ -97,7 +98,7 @@ function filterCharactersHouse() {
 function searchCharacters() {
   let emptydiv = document.querySelector(".charactersList");
   emptydiv.innerHTML = "";
-  filtercharactersList();
+  charactersList();
 }
 function filtercharactersPatronus() {
   const searchterm = document.querySelector("#searchInputPatronus").value;
@@ -106,9 +107,10 @@ function filtercharactersPatronus() {
       return response.json();
     })
     .then(function (jsonObject) {
-      const characters= jsonObject["hpCharacters"];
+      const characters = jsonObject["hpCharacters"];
+      
       //select output location
-      let searchedcharacters= document.querySelector(".charactersList");
+      let searchedcharacters = document.querySelector(".charactersList");
       //filter the characters - if they match the search term
       const searchcharactersfilter = characters.filter((x) =>
         x.title.toUpperCase().includes(searchterm.toUpperCase())
@@ -117,9 +119,11 @@ function filtercharactersPatronus() {
         let charactersdiv = document.createElement("div");
         let p = document.createElement("p");
         //use templet Literals
-        p.innerHTML = `<a href=${characters.sitelink}><img src="${characters.image}" alt ="${characters.patronus} - characters cover"></a>`;
-        charactersdiv.prepend(p);
-        searchedcharacterss.prepend(charactersdiv);
+        p.innerHTML = `<a href=${hpCharacters.name}><img src="${hpCharacters.image}" alt ="${hpCharacters.patronus} "></a>`;
+        charactersdiv.prepend(p)
+        searchedcharacters.prepend(charactersdiv);
       });
     });
 }
+
+
