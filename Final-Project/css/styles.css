@@ -28,10 +28,11 @@ header {
 
 h1 {
   display: inline;
-  color: rgb(241, 174, 4);
+  color: 5px 5px 15px 5px #000000;
   font-family: "Metal Mania", cursive;
   padding: 20px;
   font-weight: 500;
+  
 }
 
 .charactersList {
